@@ -1,0 +1,21 @@
+{
+  "name": "soul-browser-desktop",
+  "version": "1.0.0",
+  "description": "SOUL Browser — Chromium-based Desktop Browser by SOUL (Soumadip Orbit Universal Labs)",
+  "main": "main.js",
+  "author": "Soumadip Biswas <SOUL — Soumadip Orbit Universal Labs>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "electron .",
+    "dev": "set NODE_ENV=development&& electron .",
+    "build:win": "electron-builder --win --x64",
+    "pack": "electron-builder --dir"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0"
+  },
+  "devDependencies": {
+    "electron": "^35.1.2",
+    "electron-builder": "^25.1.8"
+  }
+}

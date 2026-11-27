@@ -1,0 +1,181 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --soul-bg: #F5F7FF;
+    --soul-surface: #FFFFFF;
+    --soul-surface-elevated: #ECEFF8;
+    --soul-border: rgba(16, 21, 37, 0.1);
+    --soul-text: #0B0E17;
+    --soul-muted: #55607A;
+    --soul-accent: #4A8DFF;
+    --soul-violet: #885DFF;
+  }
+
+  .dark {
+    --soul-bg: #08090D;
+    --soul-surface: #101525;
+    --soul-surface-elevated: #171E33;
+    --soul-border: rgba(245, 247, 255, 0.1);
+    --soul-text: #F5F7FF;
+    --soul-muted: #9AA3B5;
+    --soul-accent: #4A8DFF;
+    --soul-violet: #885DFF;
+  }
+
+  body {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--soul-bg);
+    color: var(--soul-text);
+    margin: 0;
+    overflow: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Custom subtle scrollbars for desktop browser chrome */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(154, 163, 181, 0.28);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(154, 163, 181, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+.high-contrast {
+  --soul-border: rgba(255, 255, 255, 0.35);
+}
+
+.soul-web-doc {
+  font-size: 15px;
+  line-height: 1.68;
+  color: #0f172a;
+}
+.soul-web-doc h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+.soul-web-doc h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.5rem 0 0.75rem;
+}
+.soul-web-doc h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+}
+.soul-web-doc p {
+  margin: 0 0 0.9rem;
+}
+.soul-web-doc ul, .soul-web-doc ol {
+  margin: 0.75rem 0 1rem 1.5rem;
+  list-style: disc;
+}
+.soul-web-doc ol {
+  list-style: decimal;
+}
+.soul-web-doc blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+}
+.soul-web-doc pre, .soul-web-doc code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875em;
+}
+.soul-web-doc pre {
+  padding: 0.875rem;
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+.soul-web-doc [hidden],
+.soul-web-doc .sr-only,
+.soul-web-doc .visually-hidden,
+.soul-web-doc .mw-jump-link,
+.soul-web-doc .vector-menu-checkbox,
+.soul-web-doc .vector-dropdown-checkbox,
+.soul-web-doc .vector-dropdown-content,
+.soul-web-doc .vector-pinned-container,
+.soul-web-doc .vector-header-container .vector-main-menu-landmark,
+.soul-web-doc .vector-sitenotice-container {
+  display: none !important;
+}
+.soul-web-doc .vector-header-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.soul-web-doc .vector-header-container input[type="search"],
+.soul-web-doc .vector-header-container input[type="text"] {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.375rem;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.875rem;
+}
+.soul-web-doc .infobox {
+  float: right;
+  clear: right;
+  margin: 0 0 1rem 1.5rem;
+  padding: 0.75rem;
+  max-width: 300px;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #f8fafc;
+  font-size: 0.82rem;
+}
+

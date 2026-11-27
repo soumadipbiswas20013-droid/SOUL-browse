@@ -1,0 +1,8 @@
+{
+  "name": "SOUL Browser",
+  "description": "SOUL Browser by SOUL — Soumadip Orbit Universal Labs. A Chromium-based desktop web browser and interactive workspace engineered for speed, privacy, and customization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

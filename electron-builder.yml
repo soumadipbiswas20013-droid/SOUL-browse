@@ -1,0 +1,24 @@
+appId: com.soul.browser
+productName: SOUL Browser
+copyright: Copyright © 2026 Soumadip Biswas — SOUL (Soumadip Orbit Universal Labs)
+directories:
+  output: release
+  buildResources: build
+files:
+  - electron/**/*
+  - dist/**/*
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  publisherName: Soumadip Orbit Universal Labs
+  artifactName: SOUL-Browser-Setup-${version}-win64.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: SOUL Browser
+  uninstallDisplayName: SOUL Browser (SOUL)
